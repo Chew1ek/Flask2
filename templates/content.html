@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+
+{% block content %}
+    {% if prof == "инженер" or prof == "строитель"%}
+        <p style="text-align: center;">Инженерные тренажеры</p>
+        <p class="fig"><img src="/static/mc.png"
+                            alt="здесь должна была быть картинка, но не нашлась"></p>
+    {% else %}
+        <p style="text-align: center;">Научные симуляторы</p>
+        <p class="fig"><img src="/static/sc.png"
+                            alt="здесь должна была быть картинка, но не нашлась"></p>
+    {% endif %}
+{% endblock %}
