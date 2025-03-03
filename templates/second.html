@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h2 style="text-align: center;">Список профессий</h2>
+    {% if how_to_list == "ol"%}
+                {% set user_list = prof_list %}
+<ol style="text-align: center;">
+    {% for user in user_list %}
+    <li style="text-align: center;">{{ user }}</li>
+    {% endfor %}
+</ol>
+    {% elif how_to_list == "ul"%}
+        {% set user_list = prof_list %}
+<ul style="text-align: center;">
+    {% for user in user_list %}
+    <li style="text-align: center;">{{ user }}</li>
+    {% endfor %}
+</ul>
+
+    {% else %}
+        <p style="text-align: center;">Неверные параметры</p>
+    {% endif %}
+{% endblock %}
